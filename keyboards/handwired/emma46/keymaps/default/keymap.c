@@ -42,9 +42,13 @@
     { K30,   KC_NO, KC_NO, K33,   K34,   K35,   K36,   KC_NO, K38,   KC_NO, K3A,   K3B,   K3C   }  \
 }
 
-#define SFT_Z LSFT_T(KC_Z)          //shift when held, Z when tapped
-#define SFT_SCLN LSFT_T(KC_SCLN)    //shift when held, ; when tapped  
-#define SFT_SLSH RSFT_T(KC_SLSH)    //shift when held, / when tapped
+#define SFT_Z LSFT_T(KC_Z)          //shift when held, Z when tapped -  qwerty - left hand pinky
+#define SFT_SLSH RSFT_T(KC_SLSH)    //shift when held, / when tapped  - qwerty - right hand pinky
+
+#define SFT_SCLN LSFT_T(KC_SCLN)    //shift when held, ; when tapped  - dvorak - left hand pinky
+#define SFT_DZ RSFT_T(KC_Z)          //shift when held, Z when tapped - dvorak - right hand pinky
+
+
 #define F_PGUP LT(_FUNC,KC_PGUP)    //FUNC layer when held, PGUP when tapped
 
 #define G_PGDN MT(MOD_LGUI,KC_PGDN) //GUI when held, PGDN when tapped
@@ -121,7 +125,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 //     └───────┘   └───────┴───────┴───────┴───────┴───────┘       └───────┴───────┴───────┴───────┴───────┴───────┘    
         KC_TAB,      KC_A,   KC_O,   KC_E,   KC_U,   KC_I,           KC_D,   KC_H,   KC_T,   KC_N,   KC_S,  KC_MINS, //12 keys
 //     └───────┘   └───────┴───────┴───────┴───────┴───────┘       └───────┴───────┴───────┴───────┴───────┴───────┘    
-        F_PGUP,    SFT_SCLN, KC_Q,   KC_J,   KC_K,   MSC_X,          MSC_X,  KC_B,   KC_M,  KC_W,    KC_V,  SFT_Z,           KC_UP, //13 keys
+        F_PGUP,    SFT_SCLN, KC_Q,   KC_J,   KC_K,   MSC_X,          MSC_X,  KC_B,   KC_M,  KC_W,    KC_V,  SFT_DZ,           KC_UP, //13 keys
 //     └───────┘   └───────┴───────┴───────┴───────┴───────┘       └───────┴───────┴───────┴───────┴───────┴───────┘       └───────┘    
         G_PGDN,                    KC_LCTL,KC_LALT, KC_ENT,         KC_SPC,         KC_BSPC,                        KC_LEFT,KC_DOWN, KC_RIGHT  //9 keys
 //     └───────┘                   └───────┴───────┴───────┘       └───────────────┴───────┘                        └──────┴───────┴────────┘        
